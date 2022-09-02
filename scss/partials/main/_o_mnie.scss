@@ -1,0 +1,28 @@
+@use '../../mixins/mixins.scss' as mix;
+
+.o_mnie
+{
+    background-image: linear-gradient(to top, #aa4b6b, #6b6b83, #3b8d99);
+}
+
+
+
+.o_mnie_box
+{
+    @include mix.mix_center;
+    text-align: center;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    h2
+    {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .arrow-class
+    {
+        margin-top: 1rem;
+        font-size: 5rem;
+        background-color: white;
+        border-radius: 100%;
+    }
+}
