@@ -228,6 +228,7 @@ html {
 }
 @media screen and (min-width: 750px) {
   .doswiadczenie {
+    height: 100vh;
     background-color: aqua;
   }
   .doswiadczenie .techno {
