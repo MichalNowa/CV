@@ -1,7 +1,13 @@
+$gradient_color1: #aa4b6b;
+$gradient_color2: #6b6b83;
+$gradient_color3: #3b8d99;
+
+
+
 .napisy
 {
     height: 100vh;
-    background: linear-gradient(to bottom, #aa4b6b, #6b6b83, #3b8d99);
+    background: linear-gradient(to bottom, $gradient_color1, $gradient_color2, $gradient_color3);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,11 +46,11 @@
     {
         h1
         {
-            font-size: 13rem;
+            font-size: 6vw;
         }
         h2
         {
-            font-size: 9rem;
+            font-size: 3vw;
         }
     }
 }

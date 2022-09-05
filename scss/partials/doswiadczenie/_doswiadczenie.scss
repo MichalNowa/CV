@@ -1,0 +1,153 @@
+@use '../../mixins/mixins.scss' as mix;
+@use 'sass:math';
+@use '../variables/variables' as var;
+
+.doswiadczenie
+{
+    @include mix.mix_center;
+    height: 200vh;
+    text-align: center;
+    background-image: linear-gradient(to bottom, #aa4b6b, #6b6b83, #3b8d99);
+    h2
+    {
+        font-size: 3rem;
+    }
+    .czas
+    {
+        font-size: 2rem;
+    }
+    .nti
+    {
+        margin-top: 20px;
+    }
+    p
+    {
+        font-size: 2rem;
+    }
+    .doswiadczenie_box
+    {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+    .nti, .samba
+    {
+        border: 5px solid black;
+        padding: 10px;
+    }
+    .techno
+    {
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .techno_box
+    {
+        display: flex;
+        background-color: transparent;
+        border: 5px solid black;
+        height: 150px;
+        width: 150px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        color: white;
+    }
+}
+
+
+@function oblicz($a)
+{
+    $res: $a * math.sqrt(2);
+    @return $res;
+}
+
+@keyframes anim 
+{
+    from
+    {
+        width: oblicz(200);
+    }
+    to
+    {
+        width: 0%;
+    }
+}
+@keyframes opacity_anim 
+{
+    from
+    {
+        opacity: 0%;
+    }
+    to
+    {
+        opacity: 100%;
+    }
+}
+
+
+
+@media screen and (min-width: 750px)
+{
+    .doswiadczenie
+    {
+        background-color: aqua;
+        .techno
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            div
+            {
+                height: 200px;
+                width: 200px;
+                
+            }
+            .techno_box
+            {
+                position: relative;
+                p
+                {
+                    opacity: 0%;
+                }
+            }
+            .techno_box::after
+            {
+                content: "";
+                border-bottom: 5px black solid;
+                position: absolute;
+                transform: rotate(45deg);
+                width: oblicz(200) * 1px;
+            }
+            .techno_box:hover::after
+            {
+                animation: anim 1s forwards;
+            }
+            .techno_box:hover
+            {
+                p
+                {
+                    animation: opacity_anim 1s 1s forwards;
+                }
+            }
+        }
+        .doswiadczenie_header
+        {
+            font-size: var.$h2_header_font_size;
+            margin-bottom: 20px;
+        }
+        .doswiadczenie_box
+        {
+            background-color: var.$background_section_color;
+            border-radius: 10px;
+            box-shadow: 10px;
+            padding: 10px;
+        }
+        .samba, .nti
+        {
+            border-radius: 10px;
+        }
+    }
+}

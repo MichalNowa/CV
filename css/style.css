@@ -102,10 +102,10 @@ html {
 
 @media screen and (min-width: 750px) {
   .napisy h1 {
-    font-size: 13rem;
+    font-size: 6vw;
   }
   .napisy h2 {
-    font-size: 9rem;
+    font-size: 3vw;
   }
 }
 .o_mnie {
@@ -123,14 +123,154 @@ html {
   margin-right: 5rem;
 }
 .o_mnie_box h2 {
-  font-size: 2rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
+}
+.o_mnie_box p {
+  font-size: 2rem;
 }
 .o_mnie_box .arrow-class {
   margin-top: 1rem;
   font-size: 5rem;
   background-color: white;
   border-radius: 100%;
+}
+.o_mnie_box .border {
+  border: 5px solid black;
+  padding: 10px;
+}
+.o_mnie_box .foto {
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .o_mnie_box h2 {
+    font-size: 4vw;
+  }
+  .o_mnie_box p {
+    font-size: 1.5vw;
+  }
+  .o_mnie_box .border {
+    border: none;
+    background-color: rgba(0, 255, 255, 0.5);
+    box-shadow: 10px;
+    border-radius: 10px;
+    padding: 10px;
+  }
+}
+.doswiadczenie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  height: 200vh;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #aa4b6b, #6b6b83, #3b8d99);
+}
+.doswiadczenie h2 {
+  font-size: 3rem;
+}
+.doswiadczenie .czas {
+  font-size: 2rem;
+}
+.doswiadczenie .nti {
+  margin-top: 20px;
+}
+.doswiadczenie p {
+  font-size: 2rem;
+}
+.doswiadczenie .doswiadczenie_box {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+.doswiadczenie .nti, .doswiadczenie .samba {
+  border: 5px solid black;
+  padding: 10px;
+}
+.doswiadczenie .techno {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.doswiadczenie .techno_box {
+  display: flex;
+  background-color: transparent;
+  border: 5px solid black;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: white;
+}
+
+@keyframes anim {
+  from {
+    width: 282.8427124746;
+  }
+  to {
+    width: 0%;
+  }
+}
+@keyframes opacity_anim {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+@media screen and (min-width: 750px) {
+  .doswiadczenie {
+    background-color: aqua;
+  }
+  .doswiadczenie .techno {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .doswiadczenie .techno div {
+    height: 200px;
+    width: 200px;
+  }
+  .doswiadczenie .techno .techno_box {
+    position: relative;
+  }
+  .doswiadczenie .techno .techno_box p {
+    opacity: 0%;
+  }
+  .doswiadczenie .techno .techno_box::after {
+    content: "";
+    border-bottom: 5px black solid;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 282.8427124746px;
+  }
+  .doswiadczenie .techno .techno_box:hover::after {
+    animation: anim 1s forwards;
+  }
+  .doswiadczenie .techno .techno_box:hover p {
+    animation: opacity_anim 1s 1s forwards;
+  }
+  .doswiadczenie .doswiadczenie_header {
+    font-size: 4vw;
+    margin-bottom: 20px;
+  }
+  .doswiadczenie .doswiadczenie_box {
+    background-color: rgba(0, 255, 255, 0.5);
+    border-radius: 10px;
+    box-shadow: 10px;
+    padding: 10px;
+  }
+  .doswiadczenie .samba, .doswiadczenie .nti {
+    border-radius: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
