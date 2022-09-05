@@ -1,16 +1,20 @@
 @use '../../mixins/mixins.scss' as mix;
-@use 'sass:math';
 @use '../variables/variables' as var;
+@use 'sass:math';
 
 .doswiadczenie
 {
     @include mix.mix_center;
-    height: 200vh;
+    height: 220vh;
     text-align: center;
-    background-image: linear-gradient(to bottom, #aa4b6b, #6b6b83, #3b8d99);
+    background-image: linear-gradient(to bottom, var.$gradient_color1, var.$gradient_color2, var.$gradient_color3);
     h2
     {
-        font-size: 3rem;
+        font-size: 4rem;
+        margin-bottom: 20px;
+        background-color: var.$background_section_color;
+        border-radius: 10px;
+        box-shadow: 10px;
     }
     .czas
     {
@@ -55,6 +59,10 @@
         margin-top: 20px;
         color: white;
     }
+    .arrow_class
+    {
+        @include mix.def_material_arrow;
+    }
 }
 
 
@@ -94,7 +102,6 @@
     .doswiadczenie
     {
         height: 100vh;
-        background-color: aqua;
         .techno
         {
             display: flex;

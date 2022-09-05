@@ -90,7 +90,7 @@ html {
   height: 50px;
   width: 50px;
 }
-.napisy .arrow-class {
+.napisy .arrow_class {
   margin-top: 1rem;
   font-size: 5rem;
   background-color: white;
@@ -111,8 +111,7 @@ html {
 .o_mnie {
   background-image: linear-gradient(to top, #aa4b6b, #6b6b83, #3b8d99);
 }
-
-.o_mnie_box {
+.o_mnie .o_mnie_box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,24 +121,27 @@ html {
   margin-left: 5rem;
   margin-right: 5rem;
 }
-.o_mnie_box h2 {
+.o_mnie .o_mnie_box h2 {
   font-size: 4rem;
   margin-bottom: 1rem;
+  background-color: rgba(0, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 10px;
 }
-.o_mnie_box p {
+.o_mnie .o_mnie_box p {
   font-size: 2rem;
 }
-.o_mnie_box .arrow-class {
+.o_mnie .o_mnie_box .arrow_class {
   margin-top: 1rem;
   font-size: 5rem;
   background-color: white;
   border-radius: 100%;
 }
-.o_mnie_box .border {
+.o_mnie .o_mnie_box .border {
   border: 5px solid black;
   padding: 10px;
 }
-.o_mnie_box .foto {
+.o_mnie .o_mnie_box .foto {
   height: 200px;
   width: 200px;
   border-radius: 100%;
@@ -166,12 +168,16 @@ html {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  height: 200vh;
+  height: 220vh;
   text-align: center;
   background-image: linear-gradient(to bottom, #aa4b6b, #6b6b83, #3b8d99);
 }
 .doswiadczenie h2 {
-  font-size: 3rem;
+  font-size: 4rem;
+  margin-bottom: 20px;
+  background-color: rgba(0, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 10px;
 }
 .doswiadczenie .czas {
   font-size: 2rem;
@@ -209,6 +215,12 @@ html {
   margin-top: 20px;
   color: white;
 }
+.doswiadczenie .arrow_class {
+  margin-top: 1rem;
+  font-size: 5rem;
+  background-color: white;
+  border-radius: 100%;
+}
 
 @keyframes anim {
   from {
@@ -229,7 +241,6 @@ html {
 @media screen and (min-width: 750px) {
   .doswiadczenie {
     height: 100vh;
-    background-color: aqua;
   }
   .doswiadczenie .techno {
     display: flex;
@@ -272,6 +283,14 @@ html {
   .doswiadczenie .samba, .doswiadczenie .nti {
     border-radius: 10px;
   }
+}
+.projekty {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=style.css.map */

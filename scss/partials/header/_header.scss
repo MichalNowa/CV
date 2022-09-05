@@ -1,13 +1,11 @@
-$gradient_color1: #aa4b6b;
-$gradient_color2: #6b6b83;
-$gradient_color3: #3b8d99;
-
+@use '../variables/variables' as var;
+@use '../../mixins/mixins.scss' as mix;
 
 
 .napisy
 {
     height: 100vh;
-    background: linear-gradient(to bottom, $gradient_color1, $gradient_color2, $gradient_color3);
+    background: linear-gradient(to bottom, var.$gradient_color1, var.$gradient_color2, var.$gradient_color3);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,12 +24,9 @@ $gradient_color3: #3b8d99;
         height: 50px;
         width: 50px;
     }
-    .arrow-class
+    .arrow_class
     {
-        margin-top: 1rem;
-        font-size: 5rem;
-        background-color: white;
-        border-radius: 100%;
+        @include mix.def_material_arrow
     }
     hr
     {

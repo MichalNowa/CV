@@ -3,45 +3,43 @@
 
 .o_mnie
 {
-    background-image: linear-gradient(to top, #aa4b6b, #6b6b83, #3b8d99);
-}
-
-
-
-.o_mnie_box
-{
-    @include mix.mix_center;
-    text-align: center;
-    margin-left: 5rem;
-    margin-right: 5rem;
-    h2
+    background-image: linear-gradient(to top, var.$gradient_color1, var.$gradient_color2, var.$gradient_color3);
+    .o_mnie_box
     {
-        font-size: 4rem;
-        margin-bottom: 1rem;
-    }
-    p
-    {
-        font-size: 2rem;
-    }
-    .arrow-class
-    {
-        margin-top: 1rem;
-        font-size: 5rem;
-        background-color: white;
-        border-radius: 100%;
-    }
-    .border
-    {
-        border: 5px solid black;
-        padding: 10px;
-    }
-    .foto
-    {
-        height: 200px;
-        width: 200px;
-        border-radius: 100%;
+        @include mix.mix_center;
+        text-align: center;
+        margin-left: 5rem;
+        margin-right: 5rem;
+        h2
+        {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background-color: var.$background_section_color;
+            border-radius: 10px;
+            box-shadow: 10px;
+        }
+        p
+        {
+            font-size: 2rem;
+        }
+        .arrow_class
+        {
+            @include mix.def_material_arrow;
+        }
+        .border
+        {
+            border: 5px solid black;
+            padding: 10px;
+        }
+        .foto
+        {
+            height: 200px;
+            width: 200px;
+            border-radius: 100%;
+        }
     }
 }
+
 
 
 @media screen and (min-width: 750px)

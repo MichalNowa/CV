@@ -6,3 +6,11 @@
     align-items: center;
     height: 100vh;
 }
+
+@mixin def_material_arrow
+{
+        margin-top: 1rem;
+        font-size: 5rem;
+        background-color: white;
+        border-radius: 100%;
+}

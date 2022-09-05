@@ -1,0 +1,6 @@
+@use '../../mixins/mixins.scss' as mix;
+.projekty
+{
+    height: 100px;
+    @include mix.mix_center;
+}
